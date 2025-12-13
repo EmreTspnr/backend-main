@@ -7,7 +7,7 @@ const createResponse = function (res, status, content) {
 
 var calculateLastRating = function (incomingVenue, isDeleted) {
     var i, numComments, avgRating, sumRating;
-    // HATA DÜZELTİLDİ: incomingValue yerine incomingVenue kullanıldı
+ 
     if (incomingVenue.comments && incomingVenue.comments.length > 0) {
         numComments = incomingVenue.comments.length;
         sumRating = 0;
@@ -90,7 +90,7 @@ const getComment = async function (req, res) {
 
 const updateComment = async function (req, res) {
     try {
-        // HATA DÜZELTİLDİ: findByIdAndUpdate yerine findById kullanıldı
+        
         await Venue.findById(req.params.venueid).select("comments").exec().then(function (venue) {
             try {
                 let comment = venue.comments.id(req.params.commentid);
@@ -114,7 +114,7 @@ const updateComment = async function (req, res) {
 
 const deleteComment = async function (req, res) {
     try {
-        // HATA DÜZELTİLDİ: findByIdAndUpdate yerine findById kullanıldı
+        
         await Venue.findById(req.params.venueid).select("comments").exec().then(function (venue) {
             try {
                 let comment = venue.comments.id(req.params.commentid);

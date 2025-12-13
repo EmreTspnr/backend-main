@@ -1,4 +1,4 @@
-[Vercel bağlantısı](https://mekanbul-backend-beta.vercel.app)
+[Vercel bağlantısı](backend-main-chi.vercel.app)
 
 **API Endpoints**
 - Tüm Mekanları listele: `GET /api/venues`

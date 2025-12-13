@@ -6,7 +6,7 @@ const createResponse = function (res, status, content) {
 }
 
 var converter = (function () {
-    var earthRadius = 6371; // km
+    var earthRadius = 6371; 
     var radian2Kilometer = function (radian) {
         return parseFloat(radian * earthRadius);
     };
@@ -90,7 +90,7 @@ const getVenue = async function (req, res) {
     catch (err) {
         createResponse(res, 404, { status: "böyle bir mekan yok" });
     }
-    //createResponse(res,200,{status:"getvenue başarılı"});
+    
 }
 
 const updateVenue = async function (req, res) {
@@ -115,7 +115,7 @@ const updateVenue = async function (req, res) {
           },
         ],
       },
-      { new: true } // Güncellenmiş veriyi döndürmek için
+      { new: true } 
     );
     createResponse(res, "201", updatedVenue);
   } catch (error) {
